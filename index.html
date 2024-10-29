@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motoristas - Diretório de Links</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://telegram.org/img/favicon.ico">
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Motoristas - Diretório de Links</title>
+        <link rel="icon" type="image/svg+xml" href="assets/image/compass-solid.svg"> <!-- Favicon SVG -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
         body {
@@ -21,12 +21,6 @@
             padding: 2rem 0;
         }
 
-        @media (max-width: 640px) {
-            .hero-section {
-                padding: 1.5rem 0;
-            }
-        }
-
         .telegram-logo {
             width: 64px;
             height: 64px;
@@ -36,14 +30,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        @media (max-width: 640px) {
-            .telegram-logo {
-                width: 48px;
-                height: 48px;
-                padding: 0.75rem;
-            }
-        }
-        
         .btn-primary {
             background: #0088cc;
             color: white;
@@ -59,7 +45,7 @@
         .btn-primary:hover {
             background: #0077b3;
         }
-        
+
         .tips-toggle {
             color: #0088cc;
             padding: 0.5rem 0;
@@ -72,6 +58,7 @@
             font-size: 0.95rem;
             border-bottom: 2px solid transparent;
             cursor: pointer;
+            margin-top: 1rem; /* Aumentar o espaçamento para baixo */
         }
 
         .tips-toggle:hover {
@@ -111,6 +98,22 @@
             line-height: 1.5;
         }
 
+        footer {
+            background: #f8f9fa;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Estilo para o link com hover */
+        .social-link {
+            color: #4b5563; /* Cor padrão do texto */
+            transition: color 0.3s ease; /* Transição suave */
+        }
+
+        .social-link:hover {
+            color: #0077b3; /* Azul de hover */
+        }
+
         @media (max-width: 640px) {
             .btn-container {
                 display: flex;
@@ -131,8 +134,8 @@
             <div class="telegram-logo mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
             </div>
-            <h1 class="text-2xl sm:text-3xl font-bold text-white text-center mb-2">Motoristas</h1>
-            <p class="text-lg text-white text-center opacity-90 max-w-xl">Acesse seus recursos e ferramentas em um clique</p>
+            <h1 class="text-2xl sm:text-3xl font-bold text-white text-center mb-2">Diretório de Links - Motoristas</h1>
+            <p class="text-lg text-white text-center opacity-90 max-w-xl">Encontre rapidamente todos os recursos e ferramentas essenciais para facilitar sua jornada.</p>
         </div>
     </header>
 
@@ -141,50 +144,57 @@
     </main>
 
     <footer>
-        <div class="container mx-auto px-4 py-6">
-            <p class="text-sm text-gray-500 text-center">&copy; 2024 Todos os direitos reservados</p>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center justify-center gap-2">
+                <div class="flex items-center gap-2">
+                    <a href="https://www.instagram.com/euoryan/" target="_blank" class="social-link flex items-center gap-2">
+                        <i class="fab fa-instagram text-xl" style="font-size: 16px;"></i> <!-- Ícone do Instagram com tamanho ajustado -->
+                        <span class="font-medium">Desenvolvido por Ryan B.</span>
+                    </a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2024 Alexandre Fretamento e Turismo | Todos os direitos reservados</p>
+            </div>
         </div>
-    </footer>
-
+    </footer>    
+    
     <script>
-        // Dados dos diretórios e dicas em formato JSON
+        // JavaScript para renderização dos diretórios
         const directories = [
             {
                 "title": "Ficha Mecânica",
-                "description": "Acesse sua ficha mecânica clicando no botão abaixo.",
+                "description": "Acesse a sua ficha mecânica de forma rápida e prática. Clique no botão abaixo para obter todas as informações necessárias.",
                 "url": "https://bit.ly/fichamecanica",
                 "icon": "fas fa-file-alt",
-                "buttonText": "Ficha Mecânica",
+                "buttonText": "Abrir Ficha Mecânica",
                 "tips": [
-                    { "title": "Acesso Rápido", "content": "O botão de Ficha Mecânica permite acessar sua ficha de forma rápida e prática." },
-                    { "title": "Informações Atualizadas", "content": "Sua ficha mecânica sempre estará atualizada com as últimas informações." }
+                    { "title": "Acesso Rápido", "content": "Utilize o botão para acessar sua ficha mecânica com agilidade." },
+                    { "title": "Informações Atualizadas", "content": "Mantenha sua ficha sempre atualizada com os últimos dados disponíveis." }
                 ]
             },
             {
                 "title": "Solicitação de Férias/Folga",
-                "description": "Solicite suas férias e folgas através do botão abaixo.",
+                "description": "Solicite suas férias e folgas de forma simples através do botão abaixo. Mantenha sua programação em dia!",
                 "url": "https://bit.ly/solicitacaoferia",
-                "icon": "fas fa-suitcase",
-                "buttonText": "Solicitar Férias/Folga",
+                "icon": "fas fa-calendar-alt",
+                "buttonText": "Fazer Solicitação de Férias",
                 "tips": [
-                    { "title": "Prazo de Solicitação", "content": "Lembre-se de enviar sua solicitação com antecedência para garantir a disponibilidade." },
-                    { "title": "Acompanhamento", "content": "Você poderá acompanhar o status da sua solicitação através do suporte operacional." }
+                    { "title": "Prazo de Solicitação", "content": "Envie sua solicitação com antecedência para garantir a aprovação." },
+                    { "title": "Acompanhamento", "content": "Acompanhe o status da sua solicitação com o suporte operacional." }
                 ]
             },
             {
                 "title": "Receber Rotas",
-                "description": "Clique no botão abaixo para começar a receber suas rotas automaticamente.",
+                "description": "Clique no botão abaixo para começar a receber suas rotas automaticamente. Torne sua experiência mais eficiente!",
                 "url": "https://bit.ly/receberrotas",
-                "icon": "fas fa-map-marked-alt",
-                "buttonText": "Começar a Receber Rotas",
+                "icon": "fas fa-robot",
+                "buttonText": "Iniciar Recebimento de Rotas",
                 "tips": [
-                    { "title": "Recebimento Automático", "content": "Ao clicar no botão, suas rotas serão enviadas automaticamente para o seu Telegram." },
-                    { "title": "Suporte Operacional", "content": "Caso tenha problemas, entre em contato com o suporte operacional para assistência." }
+                    { "title": "Recebimento Automático", "content": "Ao clicar, suas rotas serão enviadas diretamente para o seu Telegram." },
+                    { "title": "Suporte Operacional", "content": "Entre em contato com o suporte se encontrar alguma dificuldade." }
                 ]
             }
         ];
 
-        // Função para renderizar os diretórios
         function renderDirectories() {
             const container = document.getElementById('directories-container');
 
@@ -193,21 +203,17 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">${directory.title}</h2>
                         <p class="text-gray-600 mb-4 text-center">${directory.description}</p>
-                        <div class="btn-container">
-                            <a href="${directory.url}" class="btn-primary" target="_blank">
-                            <i class="${directory.icon} text-xl"></i>
-                            <span>${directory.buttonText}</span>
+                        <a href="${directory.url}" target="_blank" class="btn-primary">
+                            <i class="${directory.icon}"></i> ${directory.buttonText}
                         </a>
+                        <div class="tips-toggle" onclick="toggleTips(${index})">
+                            Ver dicas úteis <i class="fas fa-chevron-down"></i>
                         </div>
-                        <button class="tips-toggle mt-4" onclick="toggleTips(${index})">
-                            <span>Ver dicas úteis</span>
-                            <i class="fas fa-chevron-down text-sm"></i>
-                        </button>
-                        <div id="tips-${index}" class="tips-content">
+                        <div class="tips-content" id="tips-${index}">
                             ${directory.tips.map(tip => `
                                 <div class="tip-item">
-                                    <div class="tip-title">${tip.title}</div>
-                                    <div class="tip-content">${tip.content}</div>
+                                    <h3 class="tip-title">${tip.title}</h3>
+                                    <p class="tip-content">${tip.content}</p>
                                 </div>
                             `).join('')}
                         </div>
@@ -217,27 +223,12 @@
             });
         }
 
-        // Função para exibir/esconder dicas
         function toggleTips(index) {
-            const content = document.getElementById(`tips-${index}`);
-            const icon = content.previousElementSibling.querySelector('i');
-            const text = content.previousElementSibling.querySelector('span');
-
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-                text.textContent = 'Ocultar dicas';
-            } else {
-                content.style.display = 'none';
-                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-                text.textContent = 'Ver dicas úteis';
-            }
+            const tipsContent = document.getElementById(`tips-${index}`);
+            tipsContent.style.display = tipsContent.style.display === 'block' ? 'none' : 'block';
         }
 
-        // Renderizar os diretórios ao carregar a página
-        document.addEventListener('DOMContentLoaded', () => {
-            renderDirectories();
-        });
+        renderDirectories();
     </script>
 </body>
 </html>
