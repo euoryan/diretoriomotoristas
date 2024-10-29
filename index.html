@@ -160,68 +160,67 @@
     <script>
         // JavaScript para renderização dos diretórios
         const directories = [
-    {
-        "title": "Ficha Mecânica",
-        "description": "Acesse rapidamente o formulário para as fichas mecânicas.",
-        "url": "https://bit.ly/fichamecanica",
-        "icon": "fas fa-file-alt",
-        "buttonText": "Abrir Formulário",
-        "tips": [
-            { "title": "Preenchimento Obrigatório", "content": "As fichas mecânicas devem ser feitas em qualquer circunstância, mesmo que relatadas a um supervisor." },
-            { "title": "Identificação", "content": "Registre os IDs das fichas para futura identificação." },
-            { "title": "Detalhes Importantes", "content": "Inclua todos os detalhes e informações possíveis para melhor compreensão da manutenção." }
-        ]
-    },
-    {
-        "title": "Portal de Roteiro Intelbras",
-        "description": "Acesse o portal de roteiros, links e grupos da Intelbras.",
-        "url": "https://bit.ly/roteirointelbras",
-        "icon": "fas fa-clipboard-list",  // Alterado para um ícone mais profissional relacionado a roteiros
-        "buttonText": "Abrir Portal",
-        "tips": [
-            { "title": "Estrutura por Turnos", "content": "O portal é separado por turnos, cada um com suas rotas específicas, links de roteiro, e convite para grupos." },
-            { "title": "Atualizações Constantes", "content": "As rotas sofrem atualizações constantes; sempre consulte o portal antes de realizar suas rotas." },
-            { "title": "Comunicado Obrigatório", "content": "É obrigatório avisar no grupo quando iniciar a rota." }
-        ]
-    },
-    {
-        "title": "Receber Rotas",
-        "description": "Acesse nosso bot no Telegram para receber suas rotas sempre que disponíveis.",
-        "url": "https://bit.ly/receberrotas",
-        "icon": "fas fa-robot",
-        "buttonText": "Ativar Bot",
-        "tips": [
-            { "title": "ID de Usuário", "content": "Ao iniciar o bot, você receberá uma mensagem de boas-vindas com seu ID de usuário. Guarde esse ID para identificação." },
-            { "title": "Segurança", "content": "Nosso bot é seguro e acessa apenas as informações pessoais que você compartilhar." },
-            { "title": "Resolução de Problemas", "content": "Se tiver problemas ao iniciar o bot, tente fechar e reabrir o Telegram." },
-            { "title": "Comunicação com o Bot", "content": "Evite enviar mensagens aleatórias para o bot, pois ele não interage diretamente com a equipe." },
-            { "title": "Suporte", "content": "Todas as mensagens do bot têm um botão de suporte. Clique para ser direcionado ao suporte operacional." }
-        ]
-    },
-    {
-        "title": "Registro de Ausência",
-        "description": "Registre a ausência do crachá de um passageiro.",
-        "url": "https://bit.ly/registrocrachas",
-        "icon": "fas fa-id-card",
-        "buttonText": "Registrar Ausência",
-        "tips": [
-            { "title": "Registro Necessário", "content": "Qualquer passageiro que ausentar seu crachá deve ser registrado pelo motorista com as informações devidas." },
-            { "title": "Procedimentos Intelbras", "content": "Consulte os procedimentos da Intelbras para mais informações." }
-        ]
-    },
-    {
-        "title": "Procedimentos Intelbras",
-        "description": "Acesse todos os procedimentos importantes da Intelbras.",
-        "url": "http://bit.ly/intelbrasrecursos",
-        "icon": "fas fa-book",
-        "buttonText": "Ver Procedimentos",
-        "tips": [
-            { "title": "Informações Importantes", "content": "Consulte regularmente para estar sempre informado sobre os procedimentos." },
-            { "title": "Dúvidas?", "content": "Entre em contato com o suporte se precisar de assistência." }
-        ]
-    }
-];
-
+            {
+                "title": "Ficha Mecânica",
+                "description": "Acesse rapidamente o formulário para as fichas mecânicas.",
+                "url": "https://bit.ly/fichamecanica",
+                "icon": "fas fa-file-alt",
+                "buttonText": "Abrir Formulário",
+                "tips": [
+                    { "title": "Preenchimento Obrigatório", "content": "As fichas mecânicas devem ser feitas em qualquer circunstância, mesmo que relatadas a um supervisor." },
+                    { "title": "Identificação", "content": "Registre os IDs das fichas para futura identificação." },
+                    { "title": "Detalhes Importantes", "content": "Inclua todos os detalhes e informações possíveis para melhor compreensão da manutenção." }
+                ]
+            },
+            {
+                "title": "Portal de Roteiro Intelbras",
+                "description": "Acesse o portal de roteiros, links e grupos da Intelbras.",
+                "url": "https://bit.ly/roteirointelbras",
+                "icon": "fas fa-clipboard-list",  // Alterado para um ícone mais profissional relacionado a roteiros
+                "buttonText": "Abrir Portal",
+                "tips": [
+                    { "title": "Estrutura por Turnos", "content": "O portal é separado por turnos, cada um com suas rotas específicas, links de roteiro, e convite para grupos." },
+                    { "title": "Atualizações Constantes", "content": "As rotas sofrem atualizações constantes; sempre consulte o portal antes de realizar suas rotas." },
+                    { "title": "Comunicado Obrigatório", "content": "É obrigatório avisar no grupo quando iniciar a rota." }
+                ]
+            },
+            {
+                "title": "Receber Rotas",
+                "description": "Acesse nosso bot no Telegram para receber suas rotas sempre que disponíveis.",
+                "url": "https://bit.ly/receberrotas",
+                "icon": "fas fa-robot",
+                "buttonText": "Ativar Bot",
+                "tips": [
+                    { "title": "ID de Usuário", "content": "Ao iniciar o bot, você receberá uma mensagem de boas-vindas com seu ID de usuário. Guarde esse ID para identificação." },
+                    { "title": "Segurança", "content": "Nosso bot é seguro e acessa apenas as informações pessoais que você compartilhar." },
+                    { "title": "Resolução de Problemas", "content": "Se tiver problemas ao iniciar o bot, tente fechar e reabrir o Telegram." },
+                    { "title": "Comunicação com o Bot", "content": "Evite enviar mensagens aleatórias para o bot, pois ele não interage diretamente com a equipe." },
+                    { "title": "Suporte", "content": "Todas as mensagens do bot têm um botão de suporte. Clique para ser direcionado ao suporte operacional." }
+                ]
+            },
+            {
+                "title": "Registro de Ausência",
+                "description": "Registre a ausência do crachá de um passageiro.",
+                "url": "https://bit.ly/registrocrachas",
+                "icon": "fas fa-id-card",
+                "buttonText": "Registrar Ausência",
+                "tips": [
+                    { "title": "Registro Necessário", "content": "Qualquer passageiro que ausentar seu crachá deve ser registrado pelo motorista com as informações devidas." },
+                    { "title": "Procedimentos Intelbras", "content": "Consulte os procedimentos da Intelbras para mais informações." }
+                ]
+            },
+            {
+                "title": "Procedimentos Intelbras",
+                "description": "Acesse todos os procedimentos importantes da Intelbras.",
+                "url": "http://bit.ly/intelbrasrecursos",
+                "icon": "fas fa-book",
+                "buttonText": "Ver Procedimentos",
+                "tips": [
+                    { "title": "Informações Importantes", "content": "Consulte regularmente para estar sempre informado sobre os procedimentos." },
+                    { "title": "Dúvidas?", "content": "Entre em contato com o suporte se precisar de assistência." }
+                ]
+            }
+        ];
 
         function renderDirectories() {
             const container = document.getElementById('directories-container');
