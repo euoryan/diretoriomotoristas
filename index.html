@@ -46,33 +46,20 @@
         
         .btn-primary {
             background: #0088cc;
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
             transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
         
         .btn-primary:hover {
             background: #0077b3;
         }
         
-        .btn-secondary {
-            background-color: #0088cc;
-            color: white;
-            border: 2px solid #0088cc;
-            transition: background-color 0.2s ease;
-        }
-        
-        .btn-secondary:hover {
-            background-color: #0077b3;
-        }
-
-        .social-link {
-            transition: color 0.2s ease;
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            color: #0088cc;
-        }
-
         .tips-toggle {
             color: #0088cc;
             padding: 0.5rem 0;
@@ -84,6 +71,7 @@
             gap: 0.5rem;
             font-size: 0.95rem;
             border-bottom: 2px solid transparent;
+            cursor: pointer;
         }
 
         .tips-toggle:hover {
@@ -134,16 +122,6 @@
             .btn-container > a {
                 width: 100%;
             }
-
-            .step-content {
-                text-align: center;
-            }
-        }
-
-        footer {
-            background: #f8f9fa;
-            padding: 2rem 0;
-            margin-top: 3rem;
         }
     </style>
 </head>
@@ -159,132 +137,106 @@
     </header>
 
     <main class="flex-grow container mx-auto px-4 py-8">
-        <div class="max-w-2xl mx-auto space-y-6">
-            <!-- Ficha Mecânica -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Ficha Mecânica</h2>
-                <p class="text-gray-600 mb-4 text-center">Acesse sua ficha mecânica clicando no botão abaixo.</p>
-                <div class="btn-container">
-                    <a href="bit.ly/fichamecanica" class="btn-primary text-white font-medium py-3 px-4 rounded-lg text-center flex items-center justify-center gap-2" target="_blank">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Ficha Mecânica</span>
-                    </a>
-                </div>
-                <button class="tips-toggle mt-4" data-target="tips-1">
-                    <span>Ver dicas úteis</span>
-                    <i class="fas fa-chevron-down text-sm"></i>
-                </button>
-                <div id="tips-1" class="tips-content">
-                    <div class="tip-item">
-                        <div class="tip-title">Acesso Rápido</div>
-                        <div class="tip-content">O botão de Ficha Mecânica permite acessar sua ficha de forma rápida e prática.</div>
-                    </div>
-                    <div class="tip-item">
-                        <div class="tip-title">Informações Atualizadas</div>
-                        <div class="tip-content">Sua ficha mecânica sempre estará atualizada com as últimas informações.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Solicitação de Férias/Folga -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Solicitação de Férias/Folga</h2>
-                <p class="text-gray-600 mb-4 text-center">Solicite suas férias e folgas através do botão abaixo.</p>
-                <div class="btn-container">
-                    <a href="bit.ly/solicitacaoferia" class="btn-secondary font-medium py-3 px-4 rounded-lg text-center flex items-center justify-center gap-2" target="_blank">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Solicitação de Férias/Folga</span>
-                    </a>
-                </div>
-                <button class="tips-toggle mt-4" data-target="tips-2">
-                    <span>Ver dicas úteis</span>
-                    <i class="fas fa-chevron-down text-sm"></i>
-                </button>
-                <div id="tips-2" class="tips-content">
-                    <div class="tip-item">
-                        <div class="tip-title">Prazo de Solicitação</div>
-                        <div class="tip-content">Lembre-se de enviar sua solicitação com antecedência para garantir a disponibilidade.</div>
-                    </div>
-                    <div class="tip-item">
-                        <div class="tip-title">Acompanhamento</div>
-                        <div class="tip-content">Você poderá acompanhar o status da sua solicitação através do suporte operacional.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Receber Rotas -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Receber Rotas</h2>
-                <p class="text-gray-600 mb-4 text-center">Clique no botão abaixo para começar a receber suas rotas automaticamente.</p>
-                <div class="btn-container">
-                    <a href="bit.ly/receberrotas" class="btn-secondary font-medium py-3 px-4 rounded-lg text-center flex items-center justify-center gap-2" target="_blank">
-                        <i class="fas fa-robot"></i>
-                        <span>Receber Rotas</span>
-                    </a>
-                </div>
-                <button class="tips-toggle mt-4" data-target="tips-3">
-                    <span>Ver dicas úteis</span>
-                    <i class="fas fa-chevron-down text-sm"></i>
-                </button>
-                <div id="tips-3" class="tips-content">
-                    <div class="tip-item">
-                        <div class="tip-title">Recebimento Automático</div>
-                        <div class="tip-content">Ao clicar no botão, suas rotas serão enviadas automaticamente para o seu Telegram.</div>
-                    </div>
-                    <div class="tip-item">
-                        <div class="tip-title">Suporte Operacional</div>
-                        <div class="tip-content">Caso tenha problemas, entre em contato com o suporte operacional para assistência.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="directories-container" class="max-w-2xl mx-auto space-y-6"></div>
     </main>
 
     <footer>
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col items-center justify-center gap-2">
-                <a href="https://www.instagram.com/euoryan/" target="_blank" class="social-link flex items-center gap-2 text-gray-600">
-                    <i class="fab fa-instagram text-xl"></i>
-                    <span class="font-medium">@euoryan</span>
-                </a>
-                <p class="text-sm text-gray-500">&copy; 2024 Todos os direitos reservados</p>
-            </div>
+        <div class="container mx-auto px-4 py-6">
+            <p class="text-sm text-gray-500 text-center">&copy; 2024 Todos os direitos reservados</p>
         </div>
     </footer>
 
     <script>
-        document.querySelectorAll('.tips-toggle').forEach(function(toggle) {
-            toggle.addEventListener('click', function() {
-                const targetId = toggle.getAttribute('data-target');
-                const content = document.getElementById(targetId);
-                const icon = toggle.querySelector('i');
-                const text = toggle.querySelector('span');
-                
-                document.querySelectorAll('.tips-content').forEach(function(tip) {
-                    if (tip.id !== targetId) {
-                        tip.style.display = 'none';
-                        const otherToggle = document.querySelector(`[data-target="${tip.id}"]`);
-                        const otherIcon = otherToggle.querySelector('i');
-                        const otherText = otherToggle.querySelector('span');
-                        
-                        otherIcon.classList.remove('fa-chevron-up');
-                        otherIcon.classList.add('fa-chevron-down');
-                        otherText.textContent = 'Ver dicas úteis';
-                    }
-                });
+        // Dados dos diretórios e dicas em formato JSON
+        const directories = [
+            {
+                "title": "Ficha Mecânica",
+                "description": "Acesse sua ficha mecânica clicando no botão abaixo.",
+                "url": "https://bit.ly/fichamecanica",
+                "icon": "fas fa-file-alt",
+                "buttonText": "Ficha Mecânica",
+                "tips": [
+                    { "title": "Acesso Rápido", "content": "O botão de Ficha Mecânica permite acessar sua ficha de forma rápida e prática." },
+                    { "title": "Informações Atualizadas", "content": "Sua ficha mecânica sempre estará atualizada com as últimas informações." }
+                ]
+            },
+            {
+                "title": "Solicitação de Férias/Folga",
+                "description": "Solicite suas férias e folgas através do botão abaixo.",
+                "url": "https://bit.ly/solicitacaoferia",
+                "icon": "fas fa-suitcase",
+                "buttonText": "Solicitar Férias/Folga",
+                "tips": [
+                    { "title": "Prazo de Solicitação", "content": "Lembre-se de enviar sua solicitação com antecedência para garantir a disponibilidade." },
+                    { "title": "Acompanhamento", "content": "Você poderá acompanhar o status da sua solicitação através do suporte operacional." }
+                ]
+            },
+            {
+                "title": "Receber Rotas",
+                "description": "Clique no botão abaixo para começar a receber suas rotas automaticamente.",
+                "url": "https://bit.ly/receberrotas",
+                "icon": "fas fa-map-marked-alt",
+                "buttonText": "Começar a Receber Rotas",
+                "tips": [
+                    { "title": "Recebimento Automático", "content": "Ao clicar no botão, suas rotas serão enviadas automaticamente para o seu Telegram." },
+                    { "title": "Suporte Operacional", "content": "Caso tenha problemas, entre em contato com o suporte operacional para assistência." }
+                ]
+            }
+        ];
 
-                if (content.style.display === 'none' || content.style.display === '') {
-                    content.style.display = 'block';
-                    icon.classList.remove('fa-chevron-down');
-                    icon.classList.add('fa-chevron-up');
-                    text.textContent = 'Ocultar dicas';
-                } else {
-                    content.style.display = 'none';
-                    icon.classList.remove('fa-chevron-up');
-                    icon.classList.add('fa-chevron-down');
-                    text.textContent = 'Ver dicas úteis';
-                }
+        // Função para renderizar os diretórios
+        function renderDirectories() {
+            const container = document.getElementById('directories-container');
+
+            directories.forEach((directory, index) => {
+                const directoryHTML = `
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">${directory.title}</h2>
+                        <p class="text-gray-600 mb-4 text-center">${directory.description}</p>
+                        <div class="btn-container">
+                            <a href="${directory.url}" class="btn-primary" target="_blank">
+                            <i class="${directory.icon} text-xl"></i>
+                            <span>${directory.buttonText}</span>
+                        </a>
+                        </div>
+                        <button class="tips-toggle mt-4" onclick="toggleTips(${index})">
+                            <span>Ver dicas úteis</span>
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div id="tips-${index}" class="tips-content">
+                            ${directory.tips.map(tip => `
+                                <div class="tip-item">
+                                    <div class="tip-title">${tip.title}</div>
+                                    <div class="tip-content">${tip.content}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', directoryHTML);
             });
+        }
+
+        // Função para exibir/esconder dicas
+        function toggleTips(index) {
+            const content = document.getElementById(`tips-${index}`);
+            const icon = content.previousElementSibling.querySelector('i');
+            const text = content.previousElementSibling.querySelector('span');
+
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                text.textContent = 'Ocultar dicas';
+            } else {
+                content.style.display = 'none';
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                text.textContent = 'Ver dicas úteis';
+            }
+        }
+
+        // Renderizar os diretórios ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            renderDirectories();
         });
     </script>
 </body>
